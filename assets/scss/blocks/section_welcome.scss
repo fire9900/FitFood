@@ -1,0 +1,192 @@
+.section-welcome {
+	padding-left: $glb-margin;
+	width: 100%;
+
+	.welcome {
+
+		&__text {
+			display: inline-block;
+			font-family: "Amatic SC";
+			font-weight: bold;
+			font-size: 9rem;
+			width: 85rem;
+			margin-bottom: 5rem;
+
+			&_first {
+				color: $green;
+			}
+
+			&_second {
+				margin-top: 2rem;
+				margin-left: 23.2rem;
+				display: inline-flex;
+				color: $black;
+
+				&-fitfood {
+					font-family: "Charm Luxurious";
+					font-weight: normal;
+					text-shadow: -2px 2px 0 #014011;
+					color: $green;
+				}
+
+				&-good {
+					color: $red;
+				}
+			}
+		}
+	}
+
+	.fitfood-plate {
+		width: 35rem;
+		margin-left: 20.5rem;
+		margin-top: -.7rem;
+	}
+
+
+	.recommend {
+		width: 71.5rem;
+		// height: 40rem;
+		float: right;
+		display: inline-block;
+		border-top-left-radius: 16px;
+		border-bottom-left-radius: 16px;
+		border: $darkgreen solid 3px;
+		border-right: none;
+		position: relative;
+
+		&__info {
+
+			&_day {
+				display: inline-block;
+				font-size: 4.6rem;
+				margin: 1rem 0 0 1rem;
+				float: left;
+			}
+
+			&_mealtime {
+				font-family: "Amatic SC";
+				font-weight: bold;
+				letter-spacing: 1.4px;
+				padding: 5px;
+				display: inline-block;
+				font-size: 4.6rem;
+				margin-left: 2.5rem;
+				border-bottom-left-radius: 16px;
+				border-bottom-right-radius: 16px;
+				background-color: $yellow;
+			}
+
+			&_name {
+				width: 41.5rem;
+				margin-top: 2rem;
+				padding: 1rem;
+				border-top-right-radius: 16px;
+				border-bottom-right-radius: 16px;
+				background-color: $yellow;
+				font-family: "Amatic SC";
+				font-weight: bold;
+				letter-spacing: 2px;
+				font-size: 3.4rem;
+				color: $white;
+				margin-bottom: 1.5rem;
+			}
+
+			&_stats {
+				width: 19rem;
+				height: 11rem;
+				background-color: $darkgreen;
+				color: $white;
+				display: flex;
+				justify-content: space-between;
+				padding: 1rem;
+				font-family: "Josefin Sans", "Museo Sans";
+
+				.left-column {
+					position: relative;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					font-size: 2.4rem;
+					text-align: right;
+
+					span {
+						font-weight: bold;
+						float: left;
+						margin-right: 1rem;
+					}
+
+					&:after {
+						position: absolute;
+						content: "Грамм";
+						writing-mode: vertical-rl;
+						text-orientation: upright;
+						font-size: 1.5rem;
+						top: 0;
+						right: -1.7rem;
+						font-weight: 100;
+					}
+				}
+
+				.right-column {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: space-between;
+					text-align: center;
+					letter-spacing: 2px;
+					font-size: 1.6rem;
+
+					span {
+						display: block;
+						font-size: 2rem;
+					}
+				}
+			}
+		}
+
+		&__control {
+			// width: 33rem;
+			display: inline-flex;
+			margin: 2rem 0 2rem 2rem;
+			gap: 5rem;
+
+			&_price {
+				font-family: "Museo Sans", "Josefin Sans";
+				font-weight: 900;
+				font-size: 3.6rem;
+				display: inline-block;
+			}
+
+			&_count-block {
+				display: inline-flex;
+				align-items: center;
+				width: 16.4rem;
+				height: 4.5rem;
+				background-color: $darkgreen;
+				color: $white;
+				font-family: "Josefin Sans", "Ubuntu";
+				border-radius: 16px;
+
+				&[data-state="primal"] {
+					cursor: pointer;
+					font-size: 2rem;
+					justify-content: center;
+
+					*:not(.add-cart) {
+						display: none;
+					}
+				}
+
+				&--secondary .add-cart {
+					display: none;
+				}
+			}
+		}
+
+		&__photo {
+			float: right;
+		}
+
+	}
+
+}

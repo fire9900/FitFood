@@ -1,0 +1,32 @@
+{% load static %}
+
+<header class="header">
+	<nav class="nav">
+		<a href="/" class="logo">
+			<img class="logo__img" src="{% static 'bundles/images/logo.png' %}" alt="Лого">
+		</a>
+		<div class="nav__links">
+			<a class="nav__links-text nav__links-current nav__links-current" href="#1">Меню</a>
+			<!-- nav__links-current -->
+			<a class="nav__links-text" href="#2">Программы</a>
+			<a class="nav__links-text" href="#3">Вопросы</a>
+		</div>
+	</nav>
+	<div class="header__right">
+		<div class="header__right__contacts">
+			<a class="contacts__phone" href="tel:+78999888777"><i class="fa-solid fa-phone"></i> +7 (8900) 888 777</a>
+			<div class="contacts__socials">
+				<a href="https://vk.ru"><i class="fa-brands fa-vk"></i></a>
+				<a href="https://web.telegram.org/"><i class="fa-brands fa-telegram"></i></a>
+			</div>
+			
+		</div>
+		<div class="header__right__cart">
+			<i class="header__right__cart-icon fa-solid fa-cart-shopping"></i>
+			<p class="header__right__cart-amount">1990 руб</p>
+		</div>
+		<div class="btn header__right__log-in">
+			<p class="header__right__log-in__text">Войти</p>
+		</div>
+	</div>
+</header>

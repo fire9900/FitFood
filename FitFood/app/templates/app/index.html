@@ -1,0 +1,42 @@
+{%  extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="section-welcome welcome">
+	<div class="welcome__text">
+		<p class="welcome__text_first">Здоровая Еда</p>
+		<p class="welcome__text_second"><span class="welcome__text_second-fitfood">FitFood</span>—<span class="welcome__text_second-good">ЗДОРОВО</span>!</p>
+		<img src="{% static 'bundles/images/plate-kitchenware.png' %}" alt="" class="fitfood-plate"> 
+	</div>
+	<article class="recommend">
+		<div class="recommend__info">
+			<p class="recommend__info_day">Воскресенье</p>
+			<p class="recommend__info_mealtime">Завтрак</p>
+			<p class="recommend__info_name">Куриный пирог с капустой и трюфельным соусом</p>
+			<div class="recommend__info_stats">
+				<div class="left-column">
+					<p><span>Б</span> 40</p>
+					<p><span>Ж</span> 40</p>
+					<p><span>У</span> 40</p>
+				</div>
+				<div class="right-column">
+					<p><span>410</span>ккал</p>
+					<p><span>310</span>грамм</p>
+				</div>
+			</div>
+		</div>
+		<div class="recommend__control">
+			<p class="recommend__control_price">400₽</p>
+			<div class="recommend__control_count-block count-btn" data-state="primal">
+					<p class="add-cart">В КОРЗИНУ</p>
+					<button class="count-btn__decrease">—</button>
+					<p class="count-btn__count">0</p>
+					<button class="count-btn__increase">+</button>
+			</div>
+		</div>
+		<img src="" alt="" class="recommend__photo">
+	</article>
+</section>
+
+{% endblock %}

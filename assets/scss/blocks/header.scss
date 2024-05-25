@@ -1,0 +1,128 @@
+header {
+	width: 100%;
+	height: $header-height;
+	background-color: $white;
+
+	box-shadow: 0 3px 8px rgba(#000, .15);
+	padding: 2px $glb-margin;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+}
+
+.nav {
+	height: 100%;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__links {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		gap: 3rem;
+		font-weight: 400;
+		
+		// :link, :active, :visited {
+		// 	text-decoration: none;
+		// 	color: $darkgreen;
+		// }
+
+		&-text {
+			font-size: 2.4rem;
+		}
+
+		&-current {
+			// &:link, &:active, &:visited {
+			// 	text-decoration: underline 3px $darkgreen;
+			// 	text-underline-offset: 5px;
+			// }
+		}
+		
+	}
+}
+
+.logo {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	margin-right: 2.4rem;
+
+	&__img {
+		height: 100%;
+	}
+}
+
+.header__right {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	gap: 3rem;
+
+	&__contacts {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+
+		i {
+			font-size: 3.5rem;
+			color: $green;
+		}
+
+		.contacts__phone {
+			display: flex;
+			// justify-content: center;
+			align-items: center;
+			gap: 5px;
+			white-space: nowrap;
+		}
+
+		.contacts__socials {
+			display: flex;
+			gap: 2rem;
+		}
+	}
+
+	&__cart {
+		width: 21rem;
+		height: 100%;
+		border-radius: 16px;
+		background-color: $green;
+		color: $white;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 12px;
+		padding: 8px 12px;
+
+		&-icon {
+			font-size: 3.8rem;
+		}
+
+		&-amount {
+			font-size: 2.5rem;
+		}
+	}
+
+	&__log-in {
+		width: 19rem;
+		height: 5rem;
+		background-color: $green;
+		border-radius: 16px;
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&__text {
+			color: $white;
+			font-size: 2.8rem;
+		}
+	}
+}
