@@ -1,0 +1,207 @@
+.welcome {
+	.recommend {
+		width: 37.3vw;
+		// height: 40rem;
+		float: right;
+		display: inline-block;
+		border-top-left-radius: 16px;
+		border-bottom-left-radius: 16px;
+		border: $darkgreen solid 3px;
+		border-right: none;
+		position: relative;
+		background-color: var(--bg-color);
+
+		&__info {
+
+			&_day {
+				display: inline-block;
+				font-size: 4.6rem;
+				margin: 1rem 0 0 1rem;
+				float: left;
+			}
+
+			&_mealtime {
+				font-family: "Amatic SC";
+				font-weight: bold;
+				letter-spacing: 1.4px;
+				padding: 5px;
+				display: inline-block;
+				font-size: 4.6rem;
+				margin-left: 2.5rem;
+				border-bottom-left-radius: 16px;
+				border-bottom-right-radius: 16px;
+				background-color: $yellow;
+			}
+
+			&_name {
+			    width: 58.2%;
+				margin-top: 2rem;
+				padding: 1rem;
+				border-top-right-radius: 16px;
+				border-bottom-right-radius: 16px;
+				background-color: $yellow;
+				font-family: "Amatic SC";
+				font-weight: bold;
+				letter-spacing: 2px;
+				font-size: 3.4rem;
+				color: $white;
+				margin-bottom: 1.5rem;
+			}
+
+			&_stats {
+				width: 19rem;
+				height: 11rem;
+				background-color: $darkgreen;
+				color: $white;
+				display: flex;
+				justify-content: space-between;
+				padding: 1rem;
+				font-family: "Josefin Sans", "Museo Sans";
+
+				.left-column {
+					position: relative;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					font-size: 2.4rem;
+					text-align: right;
+
+					span {
+						font-weight: bold;
+						float: left;
+						margin-right: 1rem;
+					}
+
+					&:after {
+						position: absolute;
+						content: "Грамм";
+						writing-mode: vertical-rl;
+						text-orientation: upright;
+						font-size: 1.5rem;
+						top: 0;
+						right: -1.7rem;
+						font-weight: 100;
+					}
+				}
+
+				.right-column {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: space-between;
+					text-align: center;
+					letter-spacing: 2px;
+					font-size: 1.6rem;
+
+					span {
+						display: block;
+						font-size: 2rem;
+					}
+				}
+			}
+		}
+
+		&__control {
+			// width: 33rem;
+			display: inline-flex;
+			margin: 2rem 0 2rem 2rem;
+			gap: 5rem;
+
+			&_price {
+				font-family: "Museo Sans", "Josefin Sans";
+				font-weight: 900;
+				font-size: 3.6rem;
+				display: inline-block;
+			}
+
+			&_count-block {
+				display: inline-flex;
+				align-items: center;
+				width: 16.4rem;
+				height: 4.5rem;
+				background-color: $darkgreen;
+				color: $white;
+				font-family: "Josefin Sans", "Ubuntu";
+				border-radius: 16px;
+				// overflow: hidden;
+
+				> * {
+					color: $white;
+					user-select: none;
+				}
+
+				.add-cart {
+					line-height: normal;
+					font-weight: 500;
+					letter-spacing: 1px;
+				}
+
+				&[data-state="primal"] {
+					cursor: pointer;
+					font-size: 2rem;
+					justify-content: center;
+
+					*:not(.add-cart) {
+						display: none;
+					}
+				}
+
+				&[data-state="secondary"] {
+					justify-content: space-between;
+					
+					.add-cart {
+						display: none;
+					}
+				}
+			}
+
+			.count-btn {
+
+				&__count {
+					font-size: 2.7rem;
+					margin-bottom: -4px;
+					font-weight: 500;
+				}
+
+				&__decrease, &__increase {
+					height: 100%;
+					font-weight: 800;
+					font-size: 4rem;
+					
+					border: 3px solid $darkgreen;
+					line-height: 1em;
+
+					&:hover {
+						color: $darkgreen;
+						background-color: $white;
+					}
+				}
+
+				&__decrease {
+					border-top-left-radius: 16px;
+					border-bottom-left-radius: 16px;
+					padding: 0 1.1rem;
+				}
+
+				&__increase {
+					border-top-right-radius: 16px;
+					border-bottom-right-radius: 16px;
+					padding: 0 1.4rem;
+				}
+			}
+		}
+
+		&__photo {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 32.5rem;
+			height: 32.5rem;
+			border-top: solid 3px $yellow;
+			border-left: solid 3px $yellow;
+			border-top-left-radius: 75%;
+			object-fit: cover;
+		}
+
+	}
+}

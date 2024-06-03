@@ -7,7 +7,7 @@
 	<div class="welcome__text">
 		<p class="welcome__text_first">Здоровая Еда</p>
 		<p class="welcome__text_second"><span class="welcome__text_second-fitfood">FitFood</span>—<span class="welcome__text_second-good">ЗДОРОВО</span>!</p>
-		<img src="{% static 'bundles/images/plate-kitchenware.png' %}" alt="" class="fitfood-plate"> 
+		<img src="{% static 'images/plate-kitchenware.png' %}" alt="" class="fitfood-plate"> 
 	</div>
 	<article class="recommend">
 		<div class="recommend__info">
@@ -29,14 +29,43 @@
 		<div class="recommend__control">
 			<p class="recommend__control_price">400₽</p>
 			<div class="recommend__control_count-block count-btn" data-state="primal">
-					<p class="add-cart">В КОРЗИНУ</p>
+					<button class="add-cart">В КОРЗИНУ</button>
 					<button class="count-btn__decrease">—</button>
-					<p class="count-btn__count">0</p>
+					<p class="count-btn__count">1</p>
 					<button class="count-btn__increase">+</button>
 			</div>
 		</div>
-		<img src="" alt="" class="recommend__photo">
+		<img src="{% static 'images/food/raspberry.png' %}" alt="" class="recommend__photo">
 	</article>
 </section>
+
+<section class="section-menu">
+	<div class="menu-links-wrapper__hr menu-links-wrapper__hr--top"></div>
+	<div class="menu-links-wrapper">
+		<div class="menu-links">
+			<p class="menu-links__title">Блюда</p>
+			<div class="menu-links__container">
+				<a href="#" class="menu-links__link active">Завтрак</a>
+				<a href="#" class="menu-links__link">Обед</a>
+				<a href="#" class="menu-links__link">Ужин</a>
+				<a href="#" class="menu-links__link">Полдник</a>
+			</div>
+			<button class="menu-links__next">Напитки <i class="fa-solid fa-arrow-down"></i></button>
+		</div>
+	</div>
+	<div class="menu-links-wrapper__hr menu-links-wrapper__hr--bottom"></div>
+	<div class="menu-content">
+		<div class="menu-category">
+			<p class="menu-category__name">Завтрак</p>
+			<div class="menu-category__list">
+				{% for i in '012345678900000000000000000000000000000000000'|make_list %}
+				<div class="menu-card"></div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	
+</section>
+<section style="width: 100%; height: 300rem;"></section>
 
 {% endblock %}

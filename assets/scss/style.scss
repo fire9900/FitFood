@@ -7,18 +7,29 @@
 @import "vendor/fontawesome-free-6.5.2-web/scss/brands";
 
 
+:root, [data-theme="light"] {
+    --bg-color: #{$white};
+    --text-primary: #{$darkgreen};
+    --text-secondary: #{$green};
+    --header-icons: #{$green};
+    --negative-color: #{$black};
+}
 
 html {
     height: 100%;
     font-size: 62.5%;
     scroll-behavior: smooth;
+    // scrollbar-color: $darkgreen #cfcfcf;
+
+
 }
 
 body {
     height: 100%;
-    color: $darkgreen;
+    color: var(--text-primary);
     // overflow-x: hidden;
-    background-color: $white;
+    background-color: var(--bg-color);
+    // scroll-snap-type: y proximity;
 
     font-family: "Ubuntu", sans-serif;
     font-size: 2rem;
@@ -29,13 +40,27 @@ body {
     ::-moz-selection {
         background: lighten($yellow, 20%); /* Firefox */
     }
+
+    &::-webkit-scrollbar {
+      width: 14px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border: 2px solid rgba(0, 0, 0, 0);
+        background-clip: padding-box;
+        background-color: $green;
+        border-radius: 16px;
+
+        &:hover, &:active {
+            background-color: $darkgreen;
+        }
+    }
 }
 
 a {
     &:link, &:active, &:visited {
         text-decoration: none;
-        color: $darkgreen;
-
+        color: var(--text-primary);
     }
 
     &:focus {
@@ -54,6 +79,12 @@ button {
     border: none;
     padding: 0;
     background: transparent;
+    font-family: inherit;
+
+    &:focus-visible {
+        outline: 3px solid $red;
+        border-radius: 3px;
+    }
 }
 
 *,
@@ -66,4 +97,7 @@ button {
 @import "blocks/page";
 @import "blocks/header";
 @import "blocks/footer";
+
 @import "blocks/section_welcome";
+@import "blocks/welcome_recommend";
+@import "blocks/section_menu";

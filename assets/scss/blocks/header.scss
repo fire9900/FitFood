@@ -1,7 +1,7 @@
 header {
 	width: 100%;
 	height: $header-height;
-	background-color: $white;
+	background-color: var(--bg-color);
 
 	box-shadow: 0 3px 8px rgba(#000, .15);
 	padding: 2px $glb-margin;
@@ -10,6 +10,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	position: fixed;
+	z-index: 9999;
 }
 
 .nav {
@@ -71,7 +72,7 @@ header {
 
 		i {
 			font-size: 3.5rem;
-			color: $green;
+			color: var(--header-icons);
 		}
 
 		.contacts__phone {
@@ -92,8 +93,8 @@ header {
 		width: 21rem;
 		height: 100%;
 		border-radius: 16px;
-		background-color: $green;
-		color: $white;
+		background-color: var(--header-icons);
+		color: var(--bg-color);
 
 		display: flex;
 		justify-content: space-between;
@@ -113,7 +114,7 @@ header {
 	&__log-in {
 		width: 19rem;
 		height: 5rem;
-		background-color: $green;
+		background-color: var(--header-icons);
 		border-radius: 16px;
 		
 		display: flex;
@@ -121,7 +122,7 @@ header {
 		align-items: center;
 
 		&__text {
-			color: $white;
+			color: var(--bg-color);
 			font-size: 2.8rem;
 		}
 	}

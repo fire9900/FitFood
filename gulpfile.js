@@ -19,7 +19,7 @@ const spawn = require('child_process').spawn;
 
 /* Paths */
 const srcPath = 'assets/';
-const distPath = 'FitFood/static/bundles/';
+const distPath = 'FitFood/static/';
 const htmlPath = 'FitFood/**/templates/**/';
 
 const path = {
@@ -60,7 +60,7 @@ function serve() {
             target: "127.0.0.1:8000"
         },
         reloadDelay: 100,
-        reloadDebounce: 200,
+        // reloadDebounce: 200,
         notify: false,
         injectChanges: false,
         ghostMode: false,
@@ -160,7 +160,7 @@ function js(cb) {
           module: {
             rules: [
               {
-                test: /\.(js)$/,
+                test: /\.js$/,
                 exclude: /(node_modules)/,
                 use: {
                     loader: 'babel-loader',
