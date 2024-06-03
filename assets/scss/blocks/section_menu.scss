@@ -25,6 +25,7 @@
 		position: sticky;
 		top: $header-height;
 		width: 25vw;
+		float: left;
 	}
 }
 
@@ -108,10 +109,8 @@
 .menu-content {
 	width: calc(100% - 25vw);
 	// background: lightblue;
-	margin-top: calc(-100vh + 8rem);
-	// translate: 0 calc(-100vh + 8rem);
 	margin-left: 25vw;
-	padding: 3.5rem 2.4rem;
+	padding: 3.5rem 14vw 3.5rem 2.4rem;
 }
 
 .menu-category {
@@ -140,7 +139,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		gap: 3rem;
+		gap: 3.2rem 1.5rem;
 
 		.menu-card {
 			width: 26rem;
