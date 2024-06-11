@@ -3,16 +3,29 @@
 @import "fonts";
 @import "vendor/reset";
 @import "vendor/fontawesome-free-6.5.2-web/scss/fontawesome";
+@import "vendor/fontawesome-free-6.5.2-web/scss/regular";
 @import "vendor/fontawesome-free-6.5.2-web/scss/solid";
 @import "vendor/fontawesome-free-6.5.2-web/scss/brands";
-
+@import "swiper/swiper-bundle.min";
 
 :root, [data-theme="light"] {
     --bg-color: #{$white};
+    --header-color: #{$white};
     --text-primary: #{$darkgreen};
     --text-secondary: #{$green};
     --header-icons: #{$green};
     --negative-color: #{$black};
+    --juices-grad-top: #4ECEFF;
+    --juices-grad-bottom: #0077E5;
+}
+
+[data-theme="dark"] {
+    --bg-color: #8f8f8f;
+    --header-color: #505050;
+    --text-primary: #{$white};
+    --header-icons: #{$white};
+    --juices-grad-top: #{darken(#4ECEFF, 30%)};
+    --juices-grad-bottom: #{darken(#0077E5, 30%)};
 }
 
 html {
@@ -20,7 +33,6 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     // scrollbar-color: $darkgreen #cfcfcf;
-
 
 }
 
@@ -101,3 +113,4 @@ button {
 @import "blocks/section_welcome";
 @import "blocks/welcome_recommend";
 @import "blocks/section_menu";
+@import "blocks/section_juices";

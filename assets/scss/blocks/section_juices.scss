@@ -1,0 +1,275 @@
+.juices-wave {
+	vertical-align: top;
+	margin-bottom: -0.5%;
+
+	&_g {
+		transform: matrix(1,0,0,1,-75,61.5260009765625);
+		animation: 5s wave_animation infinite linear;
+
+		path {
+			fill: var(--juices-grad-top);
+		}
+	}
+
+	@keyframes wave_animation {
+		0% {
+			// transform: matrix(1,0,0,1,1.9631409645080566,61.5260009765625);
+		}
+		100% {
+			transform: matrix(1,0,0,1,285,61.5260009765625);
+		}
+	}
+}
+
+.juices-nav {
+	position: sticky;
+	top: $header-height;
+	width: 100%;
+	padding: 1.4rem 18%;
+	border-top: 4px solid #0069CC;
+	border-bottom: 4px solid #0069CC;
+	background-color: #FFAC4F;
+	z-index: 1;
+
+	&__slider {
+		& &_link {
+			display: inline-block;
+			font-family: "Amatic SC";
+			font-size: 3.2rem;
+			letter-spacing: 2px;
+			font-weight: bold;
+			text-wrap: nowrap;
+			text-align: center;
+			position: relative;
+
+			&:not(:last-child):after {
+				content: "";
+				position: absolute;
+				width: 4px;
+				height: 100%;
+				background-color: #FF8700;
+				right: 0;
+				translate: 2px 0;
+			}
+
+			&:link, &:active, &:visited {
+				color: $white;
+			}
+		}
+	}
+
+	.swiper-button-prev, .swiper-button-next {
+		color: $white;
+		font-size: 4rem;
+
+		&:after {
+			display: none;
+		}
+	}
+
+	.swiper-button-prev {
+		left: calc(18% - 4rem - 2.5rem);
+	}
+
+	.swiper-button-next {
+		right: calc(18% - 4rem - 2.5rem);
+	}
+}
+
+.section-juices {
+	width: 100%;
+	// margin-top: 10rem;
+	position: relative;
+	background: linear-gradient(var(--juices-grad-top), var(--juices-grad-bottom));
+	// background-position-y: ;
+
+	&__title {
+		padding-top: 3rem;
+		text-align: center;
+		scroll-margin-top: calc($header-height + 2rem);
+    	scroll-snap-margin-top: calc($header-height + 2rem);
+
+		&_top {
+			display: inline-block;
+			font-size: 9.6rem;
+			font-family: "Amatic SC";
+			font-weight: bold;
+			text-transform: uppercase;
+			color: $white;
+			margin-right: -1.6rem;
+			letter-spacing: 1.6rem;
+			margin-bottom: 1.5rem;
+		}
+
+		&_bottom {
+			font-family: "Museo Sans";
+			font-size: 3.2rem;	
+			font-weight: 900;
+			color: $black;
+			text-transform: uppercase;
+			margin-bottom: 2rem;
+
+			span {
+				color: $white;
+			}
+		}
+	}
+
+	&__list {
+		width: 100%;
+		padding: 8rem 14vw;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, clamp(36rem, 22vw, 44rem));
+		justify-content: space-evenly;
+		grid-gap: 6rem 1.25vw;
+	}
+}
+
+.juices-card {
+	width: clamp(36rem, 22vw, 44rem);
+	height: 70rem;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 1.6rem;
+	color: $white;
+	display: flex;
+    flex-direction: column;
+    scroll-margin-top: calc($header-height + 6.8rem + 2rem + 1rem);
+    scroll-snap-margin-top: calc($header-height + 6.8rem + 2rem + 1rem);
+
+	&__img {
+		max-width: 77.3%;
+		aspect-ratio: 34 / 51;
+		object-fit: contain;
+		margin-top: -2rem;
+		border-radius: 1.6rem;
+		filter: drop-shadow(0 4px 9.5px #0077E5);
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 2rem;
+	}
+
+	&__name {
+		text-align: center;
+		font-family: "Museo Sans";
+		text-transform: uppercase;
+		font-size: 3.2rem;
+		font-weight: 900;
+		margin-bottom: 1rem;
+	}
+
+	&__stats {
+		width: 100%;
+		height: 3.5rem;
+		border-top: 2px solid #0077E5;
+		border-bottom: 2px solid #0077E5;
+		display: flex;
+		justify-content: center;
+		// align-items: center;
+		gap: 1rem;
+		font-family: "Josefin Sans", "Museo Sans";
+
+		p {
+			font-size: 	1.8rem;
+			font-weight: bold;
+			line-height: 3.5rem;
+		}
+	}
+
+	&__control {
+		width: 100%;
+		display: inline-flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-left: 5rem;
+		padding-right: 3rem;
+		font-family: "Museo Sans", "Josefin Sans";
+		flex: 1 1 auto;
+
+		&_price {
+			font-family: "Museo Sans", "Josefin Sans";
+			font-weight: 900;
+			font-size: 4.8rem;
+			display: inline-block;
+		}
+
+		&_count-block {
+			display: inline-flex;
+			align-items: center;
+			width: 18rem;
+			height: 5rem;
+			background-color: $white;
+			color: #0077E5;
+			font-family: "Josefin Sans", "Ubuntu";
+			border-radius: 16px;
+			border: 2px solid #0077E5;
+			// overflow: hidden;
+
+			> * {
+				color: #0077E5;
+				user-select: none;
+			}
+
+			.add-cart {
+				line-height: normal;
+				font-weight: bold;
+				letter-spacing: 1px;
+			}
+
+			&[data-state="primal"] {
+				cursor: pointer;
+				font-size: 2.2rem;
+				justify-content: center;
+
+				*:not(.add-cart) {
+					display: none;
+				}
+			}
+
+			&[data-state="secondary"] {
+				justify-content: space-between;
+				
+				.add-cart {
+					display: none;
+				}
+			}
+		}
+
+		.count-btn {
+
+			&__count {
+				font-size: 3.4rem;
+				margin-bottom: -4px;
+				font-weight: bold;
+			}
+
+			&__decrease, &__increase {
+				height: 5rem;
+				font-weight: bold;
+				font-size: 5rem;
+				
+				// border: 2px solid #0077E5;
+				line-height: 0.7em;
+
+				&:hover {
+					color: $white;
+					background-color: #0077E5;
+				}
+			}
+
+			&__decrease {
+				border-top-left-radius: 16px;
+				border-bottom-left-radius: 16px;
+				padding: 0 1rem;
+				margin-left: -2px;
+			}
+
+			&__increase {
+				border-top-right-radius: 16px;
+				border-bottom-right-radius: 16px;
+				padding: 0 1.4rem;
+				margin-right: -2px;
+			}
+		}
+	}
+}

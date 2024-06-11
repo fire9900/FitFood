@@ -1,0 +1,48 @@
+{% load static %}
+
+<section class="section-menu">
+	<div class="menu-links-wrapper__hr menu-links-wrapper__hr--top"></div>
+	<div class="menu-links-wrapper">
+		<div class="menu-links">
+			<p class="menu-links__title">Блюда</p>
+			<div class="menu-links__container">
+				<a href="#breakfast" class="menu-links__link active">Завтрак</a>
+				<a href="#" class="menu-links__link">Обед</a>
+				<a href="#" class="menu-links__link">Ужин</a>
+				<a href="#" class="menu-links__link">Полдник</a>
+			</div>
+			<a class="menu-links__next" href="#juices-title">Напитки<i class="fa-solid fa-arrow-down"></i></a>
+		</div>
+	</div>
+	<div class="menu-links-wrapper__hr menu-links-wrapper__hr--bottom"></div>
+	<div class="menu-content">
+		<div class="menu-category">
+			<p class="menu-category__name" id="breakfast">Завтрак</p>
+			<div class="menu-category__list">
+				{% for i in '0123456789'|make_list %}
+				<div class="menu-card">
+					<img src="{% static 'images/food/1.png' %}" alt="" class="menu-card__img">
+					<p class="menu-card__name">куриный пирог с капустой и трюфельным соусом</p>
+					<div class="menu-card__stats">
+						<!-- <p>Б41 Ж42 У43</p> -->
+						<p>Б41</p>
+						<p>Ж42</p>
+						<p>У43</p>
+						<p>/</p>
+						<p>331 ккал</p>
+					</div>
+					<div class="menu-card__control">
+						<div class="menu-card__control_price">400₽</div>
+						<div class="menu-card__control_count-block count-btn" data-state="primal">
+							<button class="add-cart">В КОРЗИНУ</button>
+							<button class="count-btn__decrease">—</button>
+							<p class="count-btn__count">1</p>
+							<button class="count-btn__increase">+</button>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>

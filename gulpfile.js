@@ -90,7 +90,7 @@ function css(cb) {
         }))
         .pipe(sourcemaps.init())
         .pipe(sass({
-            includePaths: './node_modules/'
+            includePaths: ['node_modules']
         }))
         .pipe(autoprefixer({
             cascade: true
@@ -121,7 +121,7 @@ function cssWatch(cb) {
         }))
         .pipe(sourcemaps.init())
         .pipe(sass({
-            includePaths: './node_modules/'
+            includePaths: ['node_modules']
         }))
         .pipe(rename({
             suffix: ".min",

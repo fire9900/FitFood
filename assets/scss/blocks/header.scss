@@ -1,7 +1,7 @@
 header {
 	width: 100%;
 	height: $header-height;
-	background-color: var(--bg-color);
+	background-color: var(--header-color);
 
 	box-shadow: 0 3px 8px rgba(#000, .15);
 	padding: 2px $glb-margin;
@@ -86,21 +86,58 @@ header {
 		.contacts__socials {
 			display: flex;
 			gap: 2rem;
+
+			.theme-switcher {
+				position: relative;
+
+				&__btn {
+					position: relative;
+				}
+
+				&__arrow {
+					font-size: 2rem;
+					vertical-align: super;
+				}
+
+				&__ul {
+					display: none;
+					position: absolute;
+					top: 100%;
+					left: 0;
+					border: 2px solid $darkgreen;
+					border-radius: 8px;
+					background-color: var(--bg-color);
+
+					li {
+						padding: 0.4rem 0.8rem;
+
+						&:hover {
+							background-color: $darkgreen;
+							color: $white;
+						}
+					}					
+				}
+			}
+
+			.theme-switcher:has(.theme-switcher__btn.show) .theme-switcher__ul {
+				display: block;
+			}
 		}
 	}
 
 	&__cart {
-		width: 21rem;
+		min-width: 21rem;
 		height: 100%;
 		border-radius: 16px;
 		background-color: var(--header-icons);
 		color: var(--bg-color);
+		text-wrap: nowrap;
 
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		gap: 12px;
-		padding: 8px 12px;
+		padding: 8px 16px;
 
 		&-icon {
 			font-size: 3.8rem;
@@ -126,4 +163,12 @@ header {
 			font-size: 2.8rem;
 		}
 	}
+}
+
+[data-theme="light"] .theme-switcher__btn-dark {
+	display: none;
+}
+
+[data-theme="dark"] .theme-switcher__btn-light {
+	display: none;
 }

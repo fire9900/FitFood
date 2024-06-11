@@ -1,0 +1,63 @@
+{% load static %}
+
+<svg class="juices-wave" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 375 86" width="375" height="86" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
+	<defs>
+		<clipPath id="wave_pass">
+			<rect width="375" height="86" x="0" y="0"></rect>
+		</clipPath>
+	</defs>
+	<g clip-path="url(#wave_pass)">
+		<g class="juices-wave_g" transform="matrix(1,0,0,1,0,61.5260009765625)" opacity="1" style="display: block;">
+			<g opacity="1" transform="matrix(1,0,0,1,0,0)">
+				<path fill-opacity="1" d=" M-360,-20.416000366210938 C-390,-25.82699966430664 -420,-25.82699966430664 -450,-20.416000366210938 C-450,-20.416000366210938 -450,24.474000930786133 -450,24.474000930786133 C-450,24.474000930786133 450,24.474000930786133 450,24.474000930786133 C450,24.474000930786133 450,-20.416000366210938 450,-20.416000366210938 C420,-15.005000114440918 390,-15.005000114440918 360,-20.416000366210938 C330,-25.82699966430664 300,-25.82699966430664 270,-20.416000366210938 C240,-15.005000114440918 210,-15.005000114440918 180,-20.416000366210938 C150,-25.82699966430664 120,-25.82699966430664 90,-20.416000366210938 C60,-15.005000114440918 30,-15.005000114440918 0,-20.416000366210938 C-30,-25.82699966430664 -60,-25.82699966430664 -90,-20.416000366210938 C-120,-15.005000114440918 -150,-15.005000114440918 -180,-20.416000366210938 C-210,-25.82699966430664 -240,-25.82699966430664 -270,-20.416000366210938 C-300,-15.005000114440918 -330,-15.005000114440918 -360,-20.416000366210938z"></path>
+			</g>
+		</g>
+	</g>
+</svg>
+<section class="section-juices">
+	<div class="section-juices__title" id="juices-title">
+		<p class="section-juices__title_top"> Фирменные соки</p>
+		<p class="section-juices__title_bottom">только из <span>натуральных</span> продуктов</p>
+	</div>
+	<div class="section-juices__nav juices-nav">
+		<div class="juices-nav__slider swiper">
+			<div class="juices-nav__slider_wrapper swiper-wrapper">
+				<a class="juices-nav__slider_link swiper-slide" href="#juices-card-0">Арбузный смузи</a>
+				<a class="juices-nav__slider_link swiper-slide" href="#juices-card-1">Морковный сок</a>
+				<a class="juices-nav__slider_link swiper-slide" href="#juices-card-2">Яблочный сок</a>
+				<a class="juices-nav__slider_link swiper-slide" href="#juices-card-3">Арбузный смузи 2</a>
+				<a class="juices-nav__slider_link swiper-slide" href="#juices-card-4">Морковный сок 2</a>
+				<a class="juices-nav__slider_link swiper-slide" href="#juices-card-5">Яблочный сок 2</a>
+			</div>
+		</div>
+		<div class="swiper-button-prev"><i class="fa-regular fa-circle-left"></i></div>
+		<div class="swiper-button-next"><i class="fa-regular fa-circle-right"></i></div>
+		
+	</div>
+	<div class="section-juices__list">
+		{% for i in '012345'|make_list %}
+		<div class="juices-card" id="juices-card-{{ i }}">
+			<img src="{% static 'images/juices/watermelon.png' %}" alt="" class="juices-card__img">
+			<p class="juices-card__name">Арбузный смузи</p>
+			<div class="juices-card__stats">
+				<p>Б41</p>
+				<p>Ж42</p>
+				<p>У43</p>
+				<p>/</p>
+				<p>331 ккал</p>
+				<p>/</p>
+				<p>150 мл</p>
+			</div>
+			<div class="juices-card__control">
+				<div class="juices-card__control_price">149₽</div>
+				<div class="juices-card__control_count-block count-btn" data-state="primal">
+					<button class="add-cart">В КОРЗИНУ</button>
+					<button class="count-btn__decrease">—</button>
+					<p class="count-btn__count">1</p>
+					<button class="count-btn__increase">+</button>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</section>
